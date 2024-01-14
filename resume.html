@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume | Tom Molitor | Data Viz Specialist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@500&family=Poppins:ital@0;1&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body class="resume">
+    <a class = "btn download-link" href="Molitor - December 2023.pdf">Download Resume</a>
+    <!-- //  INTRO  // -->
+    <header class="header">
+      <div class="content-wrapper">
+        <h1>Tom Molitor</h1>
+        <h2>Data Viz Specialist</h2>
+      </div>
+    </header>
+
+    <main class="content-wrapper">
+      <!-- //  PROFILE  // -->
+      <section class="resume-section">
+        <h2>Profile</h2>
+        <p>I've been in the tech industry for over 10 years and have a diverse range of experiences from working as a business analyst, data visualization developer, and process automation. I'm also exploring other creative endeavors such as front-end development.</p>
+        
+        <a href="index.html">Back to homepage</a>
+      </section>
+
+      <!-- //  PROJECTS  // -->
+      <section class="resume-section">
+        <h2 id="projects">Projects</h2>
+        <!-- <p>View selected projects below. More information can be found at <a href="https://christinatruong.com" target="_blank">christinatruong.com</a>.</p> -->
+
+        <div class="project-wrapper">
+          <section class="project">
+            <div class="project-details">
+              <div class="project-image">
+                <img id="fantasyFootball" src="images/tableau-fantasy-500px.png" srcset="images/tableau-fantasy-1000px.png 2x" width="300px" alt="Fantasy Football Draft Board">
+              </div>
+              <a class="btn" href="https://public.tableau.com/app/profile/tom.molitor/viz/FantasyFootballDraft2022/DraftBoard" target="_blank">Tableau Public</a>
+              <h4 class="technologies">Technologies Employed</h4>
+              <ul>
+                <li>Tableau (Desktop, Public)</li>
+                <li>Alteryx (Designer, Server)</li>
+                <!--Rest APIs?-->
+              </ul>
+            </div>
+            <div class="project-summary">
+              <h3>Fantasy Football Draft Board</h3>
+              <p>After years of failing to find success in my Fantasy Football league, it was time to make a change in how I drafted players every year. Using data from the NFL, I wanted to see who the top performers were the pervious year, and graphed the total points scored in 2021. However it's not just about points scored, consistency is important too! By measuring how consistent a player performed, I could draft to avoid players who either boom or bust, and have confidence that I'll have a winning chance every week. Additionally included is the 2022 Average Draft Position (ADP) to highlight the consensus thinking, and a method to track players who have already been drafted, who is on a watchlist, and positions that have already been filled.</p>
+            </div>
+          </section>
+
+          <section class="project">
+            <div class="project-details">
+              <div class="project-image">
+                <img src="images/smart-review-500px.png" srcset="images/smart-review-1000px 2x" width="300" alt="Smart Review | Automating Tax">
+              </div>
+              <a class="btn" href="https://www.youtube.com/watch?v=VhunTRkuOH8" target="_blank">YouTube</a>
+              <h4 class="technologies">Technologies Employed</h4>
+              <ul>
+                <li>Alterx (Designer, Server)</li>
+                <li>Tableau (Desktop)</li>
+                <li>Microsoft Excel</li>
+              </ul>
+            </div>
+            <div class="project-summary">
+              <h3>Smart Review</h3>
+              <p>Doing your own taxes is never fun. It should come as no surprise that doing taxes for other people can be a bit of a drag. And after days and months of looking at numbers in a spreadsheet, it's easy to make a mistake when checking to make sure you entered in everything correctly. While working at PwC, I built an automated Alteryx workflow that would instantly review preparred tax forms to ensure everything was filled out correctly. Any mistakes or errors would be flagged for immediate review and action, while also showing what parts of the form were filled in correctly. With this workflow and visualization, tax preparers could focus their time on correcting forms and solving real problems, without spending time sifting through the documents and forms that were error-free</p>            
+            </div>
+          </section>
+
+          <section class="project">
+            <div class="project-details">
+              <div class="project-image">
+                <img src="images/tax-brackets-500px.png" srcset="images/tax-brackets-1000px.png 2x" width="300" alt="Tax Script">
+              </div>
+              <a class="btn" href="https://github.com/tmolitor002/tax-brackets/tree/master/Federal" target="">GitHub</a><!--Link to repo?-->
+              <h4 class="technologies">Technologies Employed</h4>
+              <ul>
+                <li>Python</li>
+              </ul>
+            </div>
+            
+            <div class="project-summary">
+              <h3>Income Tax Calculator</h3>
+              <p>As a tool to learn Python, I developed a script that would ask the user a few basic questions such as their marital status, taxable income, and the year they were filing, to calculate their income tax liability. The script would pull from a basic table on GitHub that contained the various tax brackets and the associated rates.</p>
+              <p>Once all the inputs have been collected, the python script will calculate the income tax liability using the progressive tax brackets for the appropriate year and filing status.</p>
+              <p><em>This tool should not be considered tax advice. Consult your attorney or a Certified Public Accountant for questions.</em></p>
+          </section>
+        </div>
+
+      <!-- //  WORK EXPERIENCE  // -->
+      <!-- Consider adding a logo image for the various workplaces. -->
+      <section  class="resume-section" id="experience">
+        <!-- Start content edits below this line.  -->
+        <h2>Work Experience</h2>
+        <p>My complete work history is available on <a href="https://www.linkedin.com/in/thomasmolitorjr" target="_blank">LinkedIn</a>.</p>
+
+        <div class="work-experiences">
+          <section class="work-item">
+            <div class="work-details">
+              <h3>Consultant</h3>
+              <p>Slalom Consulting</p>
+              <p>Jan 2021 - Present</p>
+              <h4 class="technologies">Technologies Employed</h4>
+                <ul>
+                  <li>Tableau (Desktop, Cloud, Mobile)</li>
+                  <li>Microsoft SQL Server 2019</li>
+                  <li>Microsoft Office</li>
+                </ul>
+            </div>
+            <div class="work-summary">
+              <p>Partnered with a real estate investment firm to overhaul their data ecosystem. Coordinated with database administrators to design table schemas from multiple source systems and reviewed results prior to production deployment. Developed complex SQL queries to transform data for Tableau and established firm-wide standard for business and technology certified dashboards. Collaborated with multiple buisness units including Asset Management, Investor Relations, and ESG Impact to deliver dashboards for designed for users from new-hires to the c-suite. Administered Tableau Cloud environment and responsible for all dashboard maintenance.</p>
+            </div>
+          </section>
+  
+          <section class="work-item">
+            <div class="work-details">
+              <h3>Associate</h3>
+              <p>PricewaterhouseCoopers</p>
+              <p>Jul 2018 - Dec 2020</p>
+              <h4 class="technologies">Technologies Employed</h4>
+              <ul>
+                <li>Alteryx Designer</li>
+                <li>Tableau</li>
+                <li>UI Path</li>
+                <li>Microsoft Excel</li>
+              </ul>
+            </div>
+            <div class="work-summary">
+              <p>Lead developer for the a collection of Alteryx focused workflows that automatted the tax review process for tax forms including Form 1065, Form 1120, and Form 1120-S. The single workflow reviews over 200 line items per return, standardizing the initial rewiew steps across the practice. As a result, senior accounts were free to focus on unique client situations while ensuring any basic mistakes would be caught immediately. The workflow outputted multiple Excel and Tableau files for users to review in whichever manner they were most comfortable with.</p>
+
+              <p>Additionally, our team developed a simple, yet powerful analytic app to help users compare trial balances. Often individuals would spend hours comparing two different trial balances from their client, looking for changes. Often these changes were missed, while other times a change in the account name was falsely flagged for review. With our Trial Balance Comparison tool, an associate could quickly compare two trial balances and understand the difference.</p>
+            </div>
+          </section>
+  
+          <section class="work-item">
+            <div class="work-details">
+              <h3>Cryptologic Technician</h3>
+              <p>United States Navy</p>
+              <p>Sep 2009 - Aug 2014</p>
+              <h4 class="technologies">Technologies Employed</h4>
+              <ul>
+                <li>Linux</li>
+                <li>Microsoft Server</li>
+                <li>Other</li>
+              </ul>
+            </div>
+            <div class="work-summary">
+              <p>Managed the preventative and corrective maintenance program for two $8M+ electronic warfare systems, as well as hundres of additional equipment items. Oversaw personnel performing maintenance, ensureing quality of work, while providing applicable documentation, tools parts, materials, and test equipment. Subject matter expert in all owned systems. Deployed twice onboard the USS Bainbridge (DDG 96) to conduct Anti-Piracy missions in Horn of Africa. Conducted ship-wide training covering both physical security and information dominace.</p>
+              <p>After five years of active duty service, Honorably Discharged as CTM2(SW).</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      
+
+
+      <!-- //  EDUCATION & CERTIFICATIONS  // -->
+      <section class="resume-section">
+        <!-- Start content edits below this line.  -->
+        <h2>Education</h2>
+
+        <section class="education-item">
+          <h3>DePaul University - Chicago, Illinois</h3>
+          <p>Bachelor's of Business Science - Accounting</p>
+        </section>
+  
+      </section>
+    </main>
+
+    <!-- //  FOOTER INFO, SOCIAL MEDIA  // -->
+    <footer class="footer">
+      <div class="footer-wrapper">
+        <div class="footer-item">
+          <p>© 2024 by Tom Molitor |  <a href="mailto:tommymolitor@gmail.com">tommymolitor@gmail.com</a></p>
+        </div>
+        <div class="footer-item">
+          <ul class="socials">
+            <li>
+              <a href="https://www.linkedin.com/in/thomasmolitorjr" target="_blank"><img src="images/icon-logo-linkedin.png" alt="My LinkedIn profile"></a>
+            </li>
+            <li>
+              <a href="https://public.tableau.com/app/profile/tom.molitor/vizzes" target="_blank"><img src="images/icon-logo-tableau.png" alt="My Tableau Public profile"></a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/watch?v=VhunTRkuOH8" target="_blank"><img src="images/icon-logo-youtube.png" alt="YouTube Demo"></a>
+            </li>       
+            <li>
+              <a href="https://github.com/tmolitor002" target="_blank"><img src="images/github-mark-white.png" alt="My GitHub profile"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
