@@ -295,13 +295,22 @@ JACK
 ********************************/
 
 /* Positions the image container (needed to position the left and right arrows) */
-.container {
+/* .container {
     box-sizing: border-box;
     position: relative;
+} */
+
+@media screen and (min-width: 840px){
+    .container {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
 }
 
 /* Hides the images by default */
 .jackSlides {
+
+    max-height: 635px;
     display: none;
 }
 
@@ -322,22 +331,29 @@ JACK
     color: var(--whiteBlue);
     font-weight: bold;
     font-size: 20px;
-    border-radius: 0 3px 3px 0;
+    border-radius: 0 10px 10px 0;
     user-select: none;
+    background-color: #4D5359;
+    background-blend-mode: lighten;
+    opacity: .8;
     -webkit-user-select: none;
 }
 
 /* position the "next button" to the right*/
 .next{
-    right: 0;
-    border-radius: 3px 0 0 3px;
+    right: 10%;
+    border-radius: 10px 0 0 10px;
 }
 
 /* Number text (1/9 etc) */
 .numbertext{
     color: var(--whiteBlue);
+    background-color: var(--darkGray);
+    background-blend-mode: lighten;
+    opacity: .8;
     font-size: 12px;
     padding: 8px 12px;
+    border-radius: 0 0 10px 0;
     position: absolute;
     top: 0;
 }
@@ -345,7 +361,7 @@ JACK
 /* Container for image text */
 .caption-container {
     text-align: center;
-    background-color: var(--darkBlue);
+    background-color: var(--lightBlue);
     padding: 2px 16px;
     color: var(--whiteBlue);
 }
@@ -362,7 +378,7 @@ JACK
     width: 11.11%;
 }
 
-/* Add a transparency effect for thembnail images */
+/* Add a transparency effect for thumbnail images */
 .demo {
     opacity: 0.6;
 }
@@ -370,6 +386,20 @@ JACK
 .active,
 .demo:hover{
     opacity: 1;
+}
+
+/* Caption text */
+.text{
+    color:var(--whiteBlue);
+    background-color: var(--darkGray);
+    opacity: .8;
+    background-blend-mode:lighten;
+    font-size:15px;
+    padding: 8px 12px;
+    position: relative;
+    bottom: 45px;
+    width: 100%;
+    text-align: center;
 }
 
 /********************************
