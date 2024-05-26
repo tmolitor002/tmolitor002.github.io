@@ -134,7 +134,7 @@ a:hover {
 HOME
 ********************************/
 .home {
-    background: url(/images/bg-home-office-2.avif) no-repeat;
+    background: url(../images/bg-home-office-2.avif) no-repeat;
     background-size: cover;
     background-position: center center;
     display: flex;
@@ -160,7 +160,7 @@ HOME
 RESUME
 ********************************/
 .resume header::before {
-    background: url(/images/bg-home-office-studio-3.jpg);
+    background: url(../images/bg-home-office-studio-3.jpg);
     background-size: cover;
     background-position: center;
     content: "";
