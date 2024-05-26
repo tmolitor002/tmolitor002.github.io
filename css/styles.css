@@ -145,7 +145,7 @@ HOME
 }
 .content-bg {
     background-color: var(--eggWhite); 
-    opacity: 0.8;
+    opacity: .95;
     padding: 30px;
 }
 @media screen and (max-width: 650px) {
@@ -178,6 +178,12 @@ RESUME
     top: 5px;
     left: 5px;
     font-size: 1.5rem;
+}
+.download-link:hover {
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    font-size:1.5rem;
 }
 @media screen and (max-width: 1250px) {
     .download-link {
@@ -219,7 +225,6 @@ RESUME
 /* .work-summary {
     margin: 0;    
 } */
-
 
 /********************************
 RESUME | Profile
@@ -285,6 +290,87 @@ RESUME | Educaton
     margin: 0;
 }
 
+/********************************
+JACK
+********************************/
+
+/* Positions the image container (needed to position the left and right arrows) */
+.container {
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* Hides the images by default */
+.jackSlides {
+    display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+    cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: var(--whiteBlue);
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* position the "next button" to the right*/
+.next{
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* Number text (1/9 etc) */
+.numbertext{
+    color: var(--whiteBlue);
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+    text-align: center;
+    background-color: var(--darkBlue);
+    padding: 2px 16px;
+    color: var(--whiteBlue);
+}
+
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* nine columns side by side */
+.column {
+    float: left;
+    width: 11.11%;
+}
+
+/* Add a transparency effect for thembnail images */
+.demo {
+    opacity: 0.6;
+}
+
+.active,
+.demo:hover{
+    opacity: 1;
+}
 
 /********************************
 FOOTER

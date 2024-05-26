@@ -10,12 +10,13 @@
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body class="resume">
-    <a class = "btn download-link" href="Molitor - December 2023.pdf">Download Resume</a>
+    <a class = "btn download-link" href="./documents/Molitor - May 2024.pdf">Download Resume</a>
     <!-- //  INTRO  // -->
     <header class="header">
       <div class="content-wrapper">
         <h1>Tom Molitor</h1>
         <h2>Data Viz Specialist</h2>
+        <a href="index.html">Back to homepage</a>
       </div>
     </header>
 
@@ -23,40 +24,63 @@
       <!-- //  PROFILE  // -->
       <section class="resume-section">
         <h2>Profile</h2>
-        <p>I've been in the tech industry for over 10 years and have a diverse range of experiences from working as a business analyst, data visualization developer, and process automation. I'm also exploring other creative endeavors such as front-end development.</p>
-        
-        <a href="index.html">Back to homepage</a>
+        <p>I've been in the tech industry for over 10 years and have a diverse range of experiences from working as a business analyst, data visualization developer, and process automation. I'm also exploring other creative endeavors such as front-end development and running a home lab. I've been fortunate enough to work in organizations ranging from global powerhouses to small and lean startups. Whereve I am working, I always enjoy learning new skills and sharing my knowledge with others.</p>
+        <p>My career has perviously taken me across the world, but I now call Chicago my home. When I'm not working, I've taken up woodworking as a hobby that takes up to much space in my garage, or I'll be at the park playing fetch with my dog <!--<a href="./jack.html">-->Jack<!--</a>-->.</p>
       </section>
 
       <!-- //  PROJECTS  // -->
       <section class="resume-section">
         <h2 id="projects">Projects</h2>
-        <!-- <p>View selected projects below. More information can be found at <a href="https://christinatruong.com" target="_blank">christinatruong.com</a>.</p> -->
-
+        
         <div class="project-wrapper">
           <section class="project">
             <div class="project-details">
               <div class="project-image">
-                <img id="fantasyFootball" src="images/tableau-fantasy-500px.png" srcset="images/tableau-fantasy-1000px.png 2x" width="300px" alt="Fantasy Football Draft Board">
+                <img id="foodsecurity" src="images/food-secuirty-500px.png" srcset="images/food-secuirty.png 2x" width="300px" alt="Food Deserts dashboard">
               </div>
-              <a class="btn" href="https://public.tableau.com/app/profile/tom.molitor/viz/FantasyFootballDraft2022/DraftBoard" target="_blank">Tableau Public</a>
+              <a class="btn" href="https://public.tableau.com/app/profile/tom.molitor/viz/ChicagoFoodDeserts/GroceryAccess" target="_blank">Tableau Public</a>
               <h4 class="technologies">Technologies Employed</h4>
               <ul>
                 <li>Tableau (Desktop, Public)</li>
-                <li>Alteryx (Designer, Server)</li>
-                <!--Rest APIs?-->
+                <li>Alteryx Designer</li>
+                <li>QGIS</li>
               </ul>
             </div>
             <div class="project-summary">
-              <h3>Fantasy Football Draft Board</h3>
-              <p>After years of failing to find success in my Fantasy Football league, it was time to make a change in how I drafted players every year. Using data from the NFL, I wanted to see who the top performers were the pervious year, and graphed the total points scored in 2021. However it's not just about points scored, consistency is important too! By measuring how consistent a player performed, I could draft to avoid players who either boom or bust, and have confidence that I'll have a winning chance every week. Additionally included is the 2022 Average Draft Position (ADP) to highlight the consensus thinking, and a method to track players who have already been drafted, who is on a watchlist, and positions that have already been filled.</p>
+              <h3>Food Deserts</h3>
+              <p>As part of a hackathon to investigate food insecurity in the United States, I took some time to take a look at the locations of grocery stores within the United States. Using GIS data from Open Street Map, I plotted the locations of full service grocery stores within a selection of five major U.S. cities. We then defined a food desert as any place where a there is no full service grocery store within ~ 0.8 miles (as the crow flies), or about a 15-20 minute walk for the average person. This is a slightly shorter radius than what the USDA defines as a food desert, but considering how quickly some perishable foodstuff can go bad if not refrigerated, and the challenge of travel and transporting grocers for the eldery and those with disabilities, a more realistic distance was required.</p>
+              <p>What I found was interesting, if not somewhat horrifying. Large sections of some cities like Houston have massive areas within city limits without a grocery store in the area. Other cities such as Chicago see more nearly two thirds of thier grocery located where more than 95% of their trade area is also served by another grocer store in the area, a clear example of <a class="external" href="https://www.youtube.com/watch?v=jILgxeNBK_8" targe="_blank" rel="noreferrer noopener">Hotelling's Law</a> in action.</p>
             </div>
           </section>
+        </div>
+        
+        <div class="project-wrapper">
+          <section class="project">
+            <div class="project-details">
+              <div class="project-image">
+                <img id="sql-data-viz" src="images/sql-data-viz-500px.png" srcset="images/sql-data-viz-1000px.png 2x" width="300px" alt="SQL For Data Viz course">
+              </div>
+              <a class="btn" href="https://github.com/tmolitor002/SQL-for-Data-Viz" target="_blank">GitHub</a>
+              <h4 class="technologies">Technologies Employed</h4>
+              <ul>
+                <li>SQLite</li>
+                <li>DB Browser</li>
+                <li>GitHub</li>
+              </ul>
+            </div>
+            <div class="project-summary">
+              <h3>SQL for Data Viz</h3>
+              <p>To help aspiring data visualization professionals, I wanted to create an open source course to introduce the basics of SQL to those unfamiliar. The target audience are younger professionals who know how to visualize data in tools like Tableau and Power BI, but may be intimidated or hesitatant to learn SQL. The course walks each participant through installing the software and importing data before preparing their first SQL query. The course skips past the bits like stored procedures that would fall on a database administrator, and by the end, participants are joining tables, creating CTEs, writing sub-queires, and writing their own statements to bring the data they need into their tool of choice.</p>
+              <p>And the best part, the course doesn't use another sample dataset with fake customers and sales. It uses real data from the NFL so anyone can make their own <a href="#fantasyFootball">fantasy football dashboard</a>.</p>
+            </div>
+          </section>
+        </div>
+       
 
           <section class="project">
             <div class="project-details">
               <div class="project-image">
-                <img src="images/smart-review-500px.png" srcset="images/smart-review-1000px 2x" width="300" alt="Smart Review | Automating Tax">
+                <img id="smart-review-image" src="./images/smart-review-500px.png" srcset="./images/smart-review-1000px.png 2x" width="300px" alt="Smart Review | Automating Tax">
               </div>
               <a class="btn" href="https://www.youtube.com/watch?v=VhunTRkuOH8" target="_blank">YouTube</a>
               <h4 class="technologies">Technologies Employed</h4>
@@ -72,6 +96,26 @@
             </div>
           </section>
 
+          <div class="project-wrapper">
+            <section class="project">
+              <div class="project-details">
+                <div class="project-image">
+                  <img id="fantasyFootball" src="images/tableau-fantasy-500px.png" srcset="images/tableau-fantasy-1000px.png 2x" width="300px" alt="Fantasy Football Draft Board">
+                </div>
+                <a class="btn" href="https://public.tableau.com/app/profile/tom.molitor/viz/FantasyFootballDraft2022/DraftBoard" target="_blank">Tableau Public</a>
+                <h4 class="technologies">Technologies Employed</h4>
+                <ul>
+                  <li>Tableau (Desktop, Public)</li>
+                  <li>Alteryx (Designer, Server)</li>
+                  <!--Rest APIs?-->
+                </ul>
+              </div>
+              <div class="project-summary">
+                <h3>Fantasy Football Draft Board</h3>
+                <p>After years of failing to find success in my Fantasy Football league, it was time to make a change in how I drafted players every year. Using data from the NFL, I wanted to see who the top performers were the pervious year, and graphed the total points scored in 2021. However it's not just about points scored, consistency is important too! By measuring how consistent a player performed, I could draft to avoid players who either boom or bust, and have confidence that I'll have a winning chance every week. Additionally included is the 2022 Average Draft Position (ADP) to highlight the consensus thinking, and a method to track players who have already been drafted, who is on a watchlist, and positions that have already been filled.</p>
+              </div>
+            </section>
+
           <section class="project">
             <div class="project-details">
               <div class="project-image">
@@ -81,6 +125,7 @@
               <h4 class="technologies">Technologies Employed</h4>
               <ul>
                 <li>Python</li>
+                <li>GitHub</li>
               </ul>
             </div>
             
@@ -102,23 +147,43 @@
         <div class="work-experiences">
           <section class="work-item">
             <div class="work-details">
+              <div class="company-logo">
+                <img src="./images/slalom-500px.png" srcset="./images/slalom-1000px.png 2x" width="200" alt="Slalom Consulting logo">
+              </div>
               <h3>Consultant</h3>
               <p>Slalom Consulting</p>
               <p>Jan 2021 - Present</p>
-              <h4 class="technologies">Technologies Employed</h4>
+              <!-- <h4 class="technologies">Technologies Employed</h4>
                 <ul>
                   <li>Tableau (Desktop, Cloud, Mobile)</li>
                   <li>Microsoft SQL Server 2019</li>
                   <li>Microsoft Office</li>
-                </ul>
+                </ul> -->
             </div>
             <div class="work-summary">
-              <p>Partnered with a real estate investment firm to overhaul their data ecosystem. Coordinated with database administrators to design table schemas from multiple source systems and reviewed results prior to production deployment. Developed complex SQL queries to transform data for Tableau and established firm-wide standard for business and technology certified dashboards. Collaborated with multiple buisness units including Asset Management, Investor Relations, and ESG Impact to deliver dashboards for designed for users from new-hires to the c-suite. Administered Tableau Cloud environment and responsible for all dashboard maintenance.</p>
+              <p>Collaborated with a real estate investment firm to establish a ground breaking data reporting dasbhoard for thier senior housing portfolio of assets. Standardized reporting metrics, administered user experience testing, and finalized delivery for asset management team.
+              </p>
+              <h4 class="technologies">Technologies Employed</h6>
+              <ul>
+                <li>Power BI</li>
+                <li>SQL Analysis Services</li>
+              </ul>
+              
+              <p>Partnered with another real estate investment firm to overhaul their data ecosystem. Coordinated with database administrators to design table schemas from multiple source systems and reviewed results prior to production deployment. Developed complex SQL queries to transform data for Tableau and established firm-wide standard for business and technology certified dashboards. Collaborated with multiple buisness units including Asset Management, Investor Relations, and ESG Impact to deliver dashboards for designed for users from new-hires to the C-suite. Administered Tableau Cloud environment and responsible for all dashboard maintenance.</p>
+              <h4 class="technologies">Technologies Employed</h4>
+              <ul>
+                <li>Tableau (Desktop, Cloud, Mobile)</li>
+                <li>Microsoft SQL Server 2019</li>
+                <li>Microsoft Office</li>
+              </ul>
             </div>
           </section>
   
           <section class="work-item">
             <div class="work-details">
+              <div class="company-logo">
+                <img src="./images/pwc-500px.png" srcset="./images/pwc-1000px.png 2x" width="200" alt="PricewaterhouseCoopers logo">
+              </div>
               <h3>Associate</h3>
               <p>PricewaterhouseCoopers</p>
               <p>Jul 2018 - Dec 2020</p>
@@ -139,19 +204,23 @@
   
           <section class="work-item">
             <div class="work-details">
+              <div class="company-logo">
+                <img src="./images/USN-500px.png" srcset="./images/USN-1000px.png 2x" width="200" alt="Seal of the Department of the Navy">
+              </div>
               <h3>Cryptologic Technician</h3>
               <p>United States Navy</p>
               <p>Sep 2009 - Aug 2014</p>
               <h4 class="technologies">Technologies Employed</h4>
               <ul>
                 <li>Linux</li>
-                <li>Microsoft Server</li>
+                <li>Microsoft Active Directory</li>
                 <li>Other</li>
               </ul>
             </div>
             <div class="work-summary">
-              <p>Managed the preventative and corrective maintenance program for two $8M+ electronic warfare systems, as well as hundres of additional equipment items. Oversaw personnel performing maintenance, ensureing quality of work, while providing applicable documentation, tools parts, materials, and test equipment. Subject matter expert in all owned systems. Deployed twice onboard the USS Bainbridge (DDG 96) to conduct Anti-Piracy missions in Horn of Africa. Conducted ship-wide training covering both physical security and information dominace.</p>
-              <p>After five years of active duty service, Honorably Discharged as CTM2(SW).</p>
+              <p>Managed the preventative and corrective maintenance program for two $8M+ electronic warfare systems, as well as hundres of additional equipment items. Oversaw personnel performing maintenance, ensureing quality of work, while providing applicable documentation, tools parts, materials, and test equipment. Subject matter expert in all owned systems. Deployed twice onboard the USS Bainbridge (DDG 96) to conduct Anti-Piracy missions in Horn of Africa. Team leader of ship's quick reaction force. Conducted ship-wide training covering both physical security and information dominance while holding TS/SCI security clearance.</p>
+
+              <p>Over five years of active duty service, designated as Enlisted Surface Warefare Specalist, received Navy-Marine Corps. Accomedation Medal, and awarded junior sailor of the year. Honorably Discharged as CTM2(SW).</p>
             </div>
           </section>
         </div>

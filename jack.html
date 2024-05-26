@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jack | Tom Molitor | Data Viz Specialist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@500&family=Poppins:ital@0;1&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+    <!-- Container for the image gallery -->
+    <div class="container">
+        <!-- Full-width images with number text -->
+        <div class="jackSlides">
+            <div class="numbertext">1 / 9</div>
+            <img src="./images/jack/jack0.jpg" style="width:100%">
+        </div>
+
+        <div class="jackSlides">
+            <div class="numbertext">2 / 9</div>
+            <img src="./images/jack/jack1.jpg" style="width:100%">
+        </div>
+
+        <div class="jackSlides">
+            <div class="numbertext">3 / 9</div>
+            <img src="./images/jack/jack2.JPEG" style="width: 100%">
+        </div>
+
+        <div class="jackSlides">
+            <div class="numbertext">4 / 9</div>
+            <img src="./images/jack/jack3.jpeg">
+        </div>
+
+        <div class="jackSlides">
+            <div class="numbertext">5 / 9</div>
+            <video style="width: 100%" autoplay loop muted>
+                <source src="./images/jack/jack4.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="jackSlides">
+            <div class="numbertext">6 / 9</div>
+            <img src="./images/jack/jack5.JPG" style="width:100%">
+        </div>
+
+        <div class="jackSlides">
+            <div class="numbertext">7 / 9</div>
+            <img src="./images/jack/jack6.JPEG" style="width:100%">
+        </div>
+
+        <div class="jackSlides">
+            <div class="numbertext">8 / 9</div>
+            <img src="./images/jack/jack7.JPEG">
+        </div>
+
+        <div class="jackSlides">
+            <div class="numbertext">9 / 9</div>
+            <img src="./images/jack/jack8.JPEG">
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <!-- Image text -->
+        <div class="caption-container">
+            <p id="caption"></p>
+        </div>
+
+        <!-- Thumbnail images -->
+        <div class="row">
+            <div class="column">
+                <img class="demo cursor" src="./images/jack/jack0.jpg" style="width:100%" onclick="currentSlide(1)" alt="Jack with a ball">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="./images/jack/jack1.jpg" style="width:100%" onclick="currentSlide(2)" alt="Jack at the beach">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="./images/jack/jack2.jpg" style="width:100%" onclick="currentSlide(3)" alt="Jack in the lake">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="./images/jack/jack3.jpg" style="width:100%" onclick="currentSlide(4)" alt="Jack looking confused">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="./images/jack/thumbnail4.png" style="width:100%" onclick="currentSlide(5)" alt="Jack digging a hole">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="./images/jack/jack5.jpg" style="width:100%" onclick="currentSlide(6)" alt="Jack helps with construction">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="./images/jack/jack6.jpg" style="width:100%" onclick="currentSlide(7)" alt="Jack laying in grass">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="./images/jack/jack7.jpg" style="width:100%" onclick="currentSlide(8)" alt="Jack with some friends">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="./images/jack/jack8.jpg" style="width:100%" onclick="currentSlide(9)" alt="Jack laying down">
+            </div>
+        </div>
+    </div>
+    <script>
+        let slideIndex = 1
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSLides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex=n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("jackSlides");
+            let dots = document.getElementsByClassName("demo");
+            let captionText = document.getElementById("caption");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex=slides.length}
+            for (i = 0; i <slides.length; i++) {
+                slides[i].style.display="none";
+            }
+            for (i = 0; i<dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slidesIndex-1].className += " active";
+            captionText.innerHTML = dots[slideIndex-1].alt;
+        }
+    </script>
+
+    <footer class="footer">
+        <div class="footer-wrapper">
+          <div class="footer-item">
+            <p>© 2024 by Tom Molitor |  <a href="mailto:tommymolitor@gmail.com">tommymolitor@gmail.com</a></p>
+          </div>
+          <div class="footer-item">
+            <ul class="socials">
+              <li>
+                <a href="https://www.linkedin.com/in/thomasmolitorjr" target="_blank"><img src="images/icon-logo-linkedin.png" alt="My LinkedIn profile"></a>
+              </li>
+              <li>
+                <a href="https://public.tableau.com/app/profile/tom.molitor/vizzes" target="_blank"><img src="images/icon-logo-tableau.png" alt="My Tableau Public profile"></a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/watch?v=VhunTRkuOH8" target="_blank"><img src="images/icon-logo-youtube.png" alt="YouTube Demo"></a>
+              </li>       
+              <li>
+                <a href="https://github.com/tmolitor002" target="_blank"><img src="images/github-mark-white.png" alt="My GitHub profile"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+</body>
+</html>
