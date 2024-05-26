@@ -146,6 +146,7 @@ HOME
 .content-bg {
     background-color: var(--eggWhite); 
     opacity: .95;
+    margin-top: 75px;
     padding: 30px;
 }
 @media screen and (max-width: 650px) {
@@ -175,8 +176,8 @@ RESUME
 }
 .download-link {
     position: fixed;
-    top: 5px;
-    left: 5px;
+    top: 85px;
+    left: 10px;
     font-size: 1.5rem;
 }
 .download-link:hover {
@@ -300,16 +301,22 @@ JACK
     position: relative;
 } */
 
+
+
 @media screen and (min-width: 840px){
     .container {
+
         padding-left: 10%;
         padding-right: 10%;
     }
 }
 
+.jack-wrapper{
+    padding-top: 80px;
+}
+
 /* Hides the images by default */
 .jackSlides {
-
     max-height: 635px;
     display: none;
 }
@@ -327,7 +334,7 @@ JACK
     top: 40%;
     width: auto;
     padding: 16px;
-    margin-top: -50px;
+    margin-top: -40px;
     color: var(--whiteBlue);
     font-weight: bold;
     font-size: 20px;
@@ -352,6 +359,7 @@ JACK
     background-blend-mode: lighten;
     opacity: .8;
     font-size: 12px;
+    margin-top: 80px;
     padding: 8px 12px;
     border-radius: 0 0 10px 0;
     position: absolute;
@@ -364,6 +372,9 @@ JACK
     background-color: var(--lightBlue);
     padding: 2px 16px;
     color: var(--whiteBlue);
+}
+.row{
+    margin-top: 90px;
 }
 
 .row:after{
@@ -400,6 +411,27 @@ JACK
     bottom: 45px;
     width: 100%;
     text-align: center;
+}
+
+/********************************
+HEADER
+********************************/
+.site-header {
+    position: fixed;
+    width: 100%;
+    height: 75px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    color: var(--eggWhite);
+    background-color: var(--darkBlue);
+    padding: 15px;
+}
+
+
+.site-header li{
+    display: inline-block;
+    list-style-type: none;
+    align-items: center;
 }
 
 /********************************
