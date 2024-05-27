@@ -3,36 +3,66 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume | Tom Molitor | Data Viz Specialist</title>
+    <title>Food Deserts | Tom Molitor | Data Viz Specialist</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hind:wght@500&family=Poppins:ital@0;1&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
-    <!-- //  FOOTER INFO, SOCIAL MEDIA  // -->
-    <footer class="footer">
-        <div class="footer-wrapper">
-          <div class="footer-item">
-            <p>© 2024 by Tom Molitor |  <a href="mailto:tommymolitor@gmail.com">tommymolitor@gmail.com</a></p>
-          </div>
-          <div class="footer-item">
-            <ul class="socials">
-              <li>
-                <a href="https://www.linkedin.com/in/thomasmolitorjr" target="_blank"><img src="images/icon-logo-linkedin.png" alt="My LinkedIn profile"></a>
-              </li>
-              <li>
-                <a href="https://public.tableau.com/app/profile/tom.molitor/vizzes" target="_blank"><img src="images/icon-logo-tableau.png" alt="My Tableau Public profile"></a>
-              </li>
-              <li>
-                <a href="https://www.youtube.com/watch?v=VhunTRkuOH8" target="_blank"><img src="images/icon-logo-youtube.png" alt="YouTube Demo"></a>
-              </li>       
-              <li>
-                <a href="https://github.com/tmolitor002" target="_blank"><img src="images/github-mark-white.png" alt="My GitHub profile"></a>
-              </li>
-            </ul>
-          </div>
+    <script src="./js/header.js"></script>
+    <!-- <header>
+        
+    </header> -->
+    <div class="case-studies">
+        <div class="case-study" id="food-deserts">
+            <div class='tableauPlaceholder' id='viz1716767379688' style='position: relative; padding-top: 85px;' >
+                <noscript>
+                    <a href='#'>
+                        <img alt='Grocery Access ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ch&#47;ChicagoFoodDeserts&#47;GroceryAccess&#47;1_rss.png' style='border: none' />
+                    </a>
+                </noscript>
+                <object class='tableauViz'  style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                    <param name='embed_code_version' value='3' />
+                    <param name='site_root' value='' />
+                    <param name='name' value='ChicagoFoodDeserts&#47;GroceryAccess' />
+                    <param name='tabs' value='no' /><param name='toolbar' value='yes' />
+                    <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ch&#47;ChicagoFoodDeserts&#47;GroceryAccess&#47;1.png' />
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                    <param name='language' value='en-US' />
+                </object>
+            </div>
+                <script type='text/javascript'>
+                    var divElement = document.getElementById('viz1716767379688');
+                    var vizElement = divElement.getElementsByTagName('object')[0];
+                    
+                    if ( divElement.offsetWidth > 800 ) { 
+                        vizElement.style.width='1200px';
+                        vizElement.style.height='2427px';
+                        } else if ( divElement.offsetWidth > 500 ) {
+                        vizElement.style.width='1200px';
+                        vizElement.style.height='2427px';
+                        } else { 
+                        vizElement.style.width='100%';
+                        vizElement.style.height='2427px';
+                        }
+                    
+                    var scriptElement = document.createElement('script');
+                    
+                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+                </script>
         </div>
-      </footer>
+    </div>
+
+    <!-- //  FOOTER INFO, SOCIAL MEDIA  // -->
+    <footer>
+        <script src="./js/footer.js"></script>
+    </footer>
   </body>
 </html>
