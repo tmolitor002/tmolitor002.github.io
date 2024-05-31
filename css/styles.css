@@ -434,6 +434,8 @@ HEADER
     display: inline-block;
     list-style-type: none;
     align-items: center;
+    height: auto;
+    text-align: center;
 }
 
 /********************************
