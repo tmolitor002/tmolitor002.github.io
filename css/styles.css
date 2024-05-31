@@ -71,6 +71,7 @@ body {
     max-width: 900px;
 }
 h1, h2, h3, h4 {
+    color: var(--darkBlue);
     font-family: 'Hind', sans-serif;
     font-weight: 500;
     font-style: normal;
@@ -290,6 +291,23 @@ RESUME | Educaton
 .education-item p {
     margin: 0;
 }
+/* Remove whe finding a better image */
+.depaul {
+    margin-top: -25px;
+    margin-bottom: -25px;
+}
+
+@media screen and (min-width:820px) {
+    .education-item {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        column-gap: 20px;
+    }
+
+    .education-summary p:first-child {
+        margin-top: 0;
+    }
+}
 
 /********************************
 JACK
@@ -425,8 +443,15 @@ HEADER
     display: grid;
     grid-template-columns: repeat(2,1fr);
     color: var(--eggWhite);
-    background-color: var(--darkBlue);
+    /* background-color: var(--darkBlue); */
+    background-image: linear-gradient(to top left, var(--lightBlue), var(--mintGreen));
     padding: 15px;
+    z-index: 999;
+}
+
+.site-header h1, h2, h3, h4 {
+    color: var(--eggWhite);
+    align-content: center;
 }
 
 
@@ -455,8 +480,10 @@ FOOTER
 ********************************/
 
 footer {
-    background: var(--darkGray);
+    /*background: var(--darkGray);*/
+    background-image: linear-gradient(to top left, var(--darkBlue), var(--darkGray));
     color: var(--eggWhite);
+    z-index: 999;
     /* width: 100%; */
 }
 
