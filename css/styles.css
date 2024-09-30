@@ -284,7 +284,7 @@ RESUME | Projects
 /********************************
 RESUME | Work Experience
 ********************************/
-.work-details h3 {
+.work-details h3, h4 {
     color: var(--darkGray);
 }
 
