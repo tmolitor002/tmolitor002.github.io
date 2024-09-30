@@ -196,6 +196,7 @@ RESUME
 }
 .download-link:hover {
     position: fixed;
+    background-color: var(--softMaroon);
     top: 5px;
     left: 5px;
     font-size:1.5rem;
@@ -377,8 +378,7 @@ JACK
 }
 
 /* Next & previous buttons */
-.prev,
-.next {
+.prev, .next {
     cursor: pointer;
     position: absolute;
     top: 40%;
