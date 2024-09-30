@@ -71,7 +71,6 @@ body {
     max-width: 900px;
 }
 h1, h2, h3, h4 {
-    color: var(--darkBlue);
     font-family: 'Hind', sans-serif;
     font-weight: 500;
     font-style: normal;
@@ -80,21 +79,21 @@ h1, h2, h3, h4 {
 h1 {
     font-size: 7rem;
     line-height: 1;
-    color: var(--darkBlue)
+    color: var(--darkBlue);
 }
 h2 {
     font-size: 3.6rem;
     line-height: 1;
-    color: var(--mediumBlue)
+    color: var(--mediumBlue);
 }
 h3 {
     font-size: 2.4rem;
-    color: var(--darkGray)
+    color: var(--darkGray);
 }
 h4 {
     font-size: 1.8rem;
     margin: 0;
-    color: var(--darkGray)
+    color: var(--darkGray);
 }
 ul {
     line-height: 1.5;
@@ -154,6 +153,9 @@ HOME
     margin-top: 75px;
     padding: 30px;
 }
+.content-bg h2 {
+    color: var(--mediumBlue);
+}
 @media screen and (max-width: 650px) {
     .home .content-wrapper {
         padding: 10px;
@@ -173,11 +175,18 @@ RESUME
     display: block;
     height: 375px;
 }
+.content-wrapper h1 {
+    color: var(--darkBlue);
+}
+.content-wrapper h2 {
+    color: var(--mediumBlue);
+}
 .resume-section {
     margin-bottom: 25px;
 }
 .resume-section h2 {
-    border-bottom: 2px dashed var(--lightBlue);
+    color: var(--mediumBlue);
+    border-bottom: 2px dashed var(--darkBlue);
 }
 .download-link {
     position: fixed;
@@ -239,6 +248,12 @@ RESUME | Profile
 /********************************
 RESUME | Projects
 ********************************/
+.project-summary h3 {
+    color: var(--darkGray);
+}
+.technologies h4 {
+    color: var(--darkGray);
+}
 @media screen and (min-width: 840px) {
     .project {
         display: grid;
@@ -269,6 +284,10 @@ RESUME | Projects
 /********************************
 RESUME | Work Experience
 ********************************/
+.work-details h3 {
+    color: var(--darkGray);
+}
+
 .work-item {
     margin: 30px 0;
 }
@@ -289,6 +308,9 @@ RESUME | Work Experience
 /********************************
 RESUME | Educaton
 ********************************/
+.education-details h3 {
+    color: var(--darkGray);
+}
 .education-item {
     margin: 30px 0;
 }
