@@ -254,6 +254,9 @@ RESUME | Projects
 .work-details h4 {
     color: var(--darkGray);
 }
+.work-summary h4{
+    color: var(--darkGray);
+}
 .technologies h4 {
     color: var(--darkGray);
 }
