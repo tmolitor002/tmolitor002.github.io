@@ -110,6 +110,7 @@ a:hover {
     color: var(--softMaroon);
     text-decoration: none;
 }
+
 .btn {
     background: var(--mediumBlue);
     color: var(--eggWhite);
@@ -122,8 +123,10 @@ a:hover {
     padding: 7px;
     border-radius: 8px;
 }
+
 .btn:hover {
     background: var(--softMaroon);
+    background-size: cover;
     color: var(--eggWhite);
     text-decoration: none;
     text-transform: uppercase;
