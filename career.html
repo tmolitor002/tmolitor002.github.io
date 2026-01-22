@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tom Molitor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles_new.css">
+</head>
+<body class="career">
+
+    <script src="js/header_new.js"></script>
+    
+    <style>
+        nav {
+            background-color: rgba(192, 224, 135, 0.2);
+            backdrop-filter: blur(10px)
+        }
+    </style>
+    
+    <section class="section-2">
+        <div class="section-content">
+            <div>
+                <h2>Profile</h2>
+                <p>I have been in the technology industry for over 15 years had have had a diverse range of experiences from working as an analytics engineer, data visualization developer, and process automation designer. I've been fortunate enough to work in organizations ranging from global powerhouses to small and lean startups. Wherever I am working, I always enjoy learning new skills and sharing my knowledge with others.</p>
+                <p>My career has previously taken me across the world, but I now am happy to call Chicagoland my home. When I'm not working, I've taken up woodworking as a hobby that takes up way too much space in my garage, or I'll be at the park playing fetch with my dog <a href="jack.html">Jack</a>, who loves diggin holes at the beach and chasing wild rabbits. I'm also exploring other creative endeavors such as web development, utilizing machine learning to help my fantasy football team, and running a home lab. I am also (slowly) working on finishing the basement of my house, which has been its own journey.</p>
+            </div>
+            <h2>Public Projects</h2>
+            <div class="project">
+                <div class="project-wrapper">
+                    <div class="project-details">
+                        <div class="project-image">
+                            <img id="foodsecurity" src="images/food-secrity-500px.png" srcset="images/food-security.png" width="300px" alt="Food Deserts Dashboard">
+                        </div>
+                        <a class="case-study" href="food-deserts.html">Interactive Dashboard</a>
+                        <h4 class="technologies">Technologies</h4>
+                        <ul>
+                            <li>Tableau (Desktop, Public)</li>
+                            <li>Alteryx Designer</li>
+                            <li>QGIS</li>
+                        </ul>
+                    </div>
+                    <div class="description">
+                        <h3>Food Deserts</h3>
+                        <!-- add link to open street map data -->
+                        <p>As part of a hackathon to investigate food insecurity in the United States, I took some time to take a map the locations of grocery stores to better understand food accessibility. Using GIS data from Open Street Map, I plotted the locations of full service grocery stores wihtin a selection of five majore U.S. cities. We then defined a food desert as any place where there is no full service grocery store within ~ 0.8 miles (as the crow flies), or about a 15-20 minute walk for the average person. This is a slighly shorter radious than what the USDA defines as a food desert, but considering how quickly some perishable foodstuff can go bad if not refrigerated, the challenge of trave land transporting groceries for the elderly and those with disabilities, or the difficulty traversing <a href="https://www.betterstreetschicago.org/plow-the-sidwalks" target="_blank">unshoveled sidwalks</a>, a more realistic distance was required.</p>
+                        <p>What I found was interesitng, if not somewhat horrifying. Large sections of some cities like Houston have massive areas within city limits without a grocery store in the area. Other cities such as Chicago see nearly two-thirds of grocery stores located where more than 95% of their trade area is also served by another grocery store in the ara, a clear example of <a href="https://www.youtube.com/watch?v=jILgxeNBK_8">Hotelling's Law</a> in action.</p>
+                    </div>
+                </div>    
+            </div>
+            <div class="project">
+                <div class="project-wrapper">
+                    <div class="project-details">
+                        <div class="project-image">
+                            <img id="smart-review-image" src="images/smart-review-500px.png" srcset="images/smart-review-1000px.png 2x" width="300px" alt="Smart Review - Automating Tax">
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=VhunTRkuOH8" target="_blank">YouTube</a>
+                        <h4 class="technologies">Technologies</h4>
+                        <ul>
+                            <li>Alteryx (Designer, Server)</li>
+                            <li>Tableau (Desktop)</li>
+                            <li>Microsoft Excel</li>
+                        </ul>
+                    </div>
+                    <div class="description">
+                        <h3>Smart Review</h3>
+                        <p>Doing your own taxes is never fun. It should come as no surprise that doing taxes for other people can be a bit of a drag. And after days and months of looking at numbers in a spreadsheet, it's easy to make a mistake when checking to make sure you entered in everything correctly. With the Smart Review suite, any mistakes or errorswould be flagged for immediate review and action, while also showing what parts of the form were filled out correctly. With this workflow and visualization, tax preparers couldfocus their time on correcting forms and solving real problems, without spending time sifting through the documents and forms that were error-free.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="project">
+                <div class="project-wrapper">
+                    <div class="project-details">
+                        <div class="project-image">
+                            <img id="fantasy-football" src="images/tableau-fantasy-500px.png" srcset="images/tableau-fantasy-1000px 2x" width="300px" alt="Fantasy Football Draft Board">
+                        </div>
+                        <a href="https://public.tableau.com/app/profile/tom.molitor/viz/FantasyFootballDraft2022/DraftBoard" target="_blank">Tableau Public</a>
+                        <h4 class="technologies">Technologies</h4>
+                        <ul>
+                            <li>Tableau (Desktop, Public)</li>
+                            <li>Alteryx (Designer, Server)</li>
+                        </ul>
+                    </div>
+                    <div class="description">
+                        <h3>Fantasy Football Draft Board</h3>
+                        <p>After years of ailing to find success in my Fantasy Football league, it was time to make a change in how I drafted players every year. Using data from the NFL, I wanted to see who the top performers were the previous year, and graphed the total points scored in 2021. However it's not just about points scored consistency is important too! By measuring how consistent a palyer performed, I could draft to avoid players who either boom or bust in a given week, and hae confidence that I'll have a winning chance in each game. Additionally included is the 2022 Average Draft Position (ADP) to highligh the consensus thinking, and a method to tracak players who have already been drafted, who is on a watchlisth, and positions that have already been filled.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="project">
+                <div class="project-wrapper">
+                    <div class="project-details">
+                        <div class="project-image">
+                            <img id="tax-brackets" src="images/tax-brackets-500px.png" srcset="images/tax-brackets-1000px 2x" width="300" alt="Tax Script">
+                        </div>
+                        <a href="https://github.com/tmolitor002/tax-brackets/tree/master/Federal" target="">GitHub</a>
+                        <h4 class="technologies">Technologies</h4>
+                        <ul>
+                            <li>Python</li>
+                            <li>Git</li>
+                        </ul>
+                    </div>
+                    <div class="description">
+                        <h3>Income Tax Calculator</h3>
+                        <p>As a tool to learn Python, I developed a script that would ask the user a few basic questions such as their marital status, taxable income, and the year they were filing, to calculate their income tax liability. The script would pull from a basic fact table on GitHub that contained the various tax brackets and the associated tax rates.</p>
+                        <p>Once all the inputs have been collected, the python script will calculate the income tax liability using the progressive tax brackets for the appropriate yeare and filing status.</p>
+                        <p><i>This tools should not be considered tax advice. Consult your attorney or Certified Public Accountatn for questions.</i></p>
+                    </div>
+                </div>
+            </div>
+            <div class="section-content">
+                <h2 id="work-experience">Work Experience</h2>
+                <p>My complete worke history is available on <a href="https://www.linkedin.com/in/thomasmolitorjr" target="_blank">LinkedIn</a></a> </p>
+            </div>
+        </div>
+        
+
+    </section>
+    
+
+    <script src="js/footer_new.js"></script>
+
+</body>

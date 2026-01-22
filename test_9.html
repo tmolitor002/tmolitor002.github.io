@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tom Molitor | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Root Variables - Mr. Robot / Westworld / Matrix Aesthetic */
+        :root {
+            --color-dark: #0a1428;
+            --color-darker: #050a0f;
+            --color-bg: #0f1419;
+            --color-primary-cyan: #00d9ff;
+            --color-matrix-green: #00ff41;
+            --color-accent-gold: #d4af37;
+            --color-accent-amber: #ffd700;
+            --color-red: #ff0055;
+            --color-blue: #0066ff;
+            --color-text: #e0e0e0;
+            --color-text-secondary: #808080;
+            --font-mono: 'Courier Prime', monospace;
+            --font-display: 'Orbitron', sans-serif;
+
+            /* Glitch configuration variables */
+            --glitch-frequency: 4s;
+            --glitch-length: 0.1s;
+            --glitch-groups: 7;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-mono);
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* ===== GLITCH TEXT EFFECT ===== */
+        .glitch-text {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Generate glitch animations for each group */
+        @keyframes glitch-group-1 {
+            0%, 100% { opacity: 1; color: var(--color-text); }
+            1%, 99% { opacity: 1; color: var(--color-red); }
+        }
+
+        @keyframes glitch-group-2 {
+            0%, 14%, 100% { opacity: 1; color: var(--color-text); }
+            15%, 29% { opacity: 1; color: var(--color-red); }
+            30% { opacity: 1; color: var(--color-text); }
+        }
+
+        @keyframes glitch-group-3 {
+            0%, 28%, 100% { opacity: 1; color: var(--color-text); }
+            29%, 43% { opacity: 1; color: var(--color-red); }
+            44% { opacity: 1; color: var(--color-text); }
+        }
+
+        @keyframes glitch-group-4 {
+            0%, 42%, 100% { opacity: 1; color: var(--color-text); }
+            43%, 57% { opacity: 1; color: var(--color-red); }
+            58% { opacity: 1; color: var(--color-text); }
+        }
+
+        @keyframes glitch-group-5 {
+            0%, 56%, 100% { opacity: 1; color: var(--color-text); }
+            57%, 71% { opacity: 1; color: var(--color-red); }
+            72% { opacity: 1; color: var(--color-text); }
+        }
+
+        @keyframes glitch-group-6 {
+            0%, 70%, 100% { opacity: 1; color: var(--color-text); }
+            71%, 85% { opacity: 1; color: var(--color-red); }
+            86% { opacity: 1; color: var(--color-text); }
+        }
+
+        @keyframes glitch-group-7 {
+            0%, 84%, 100% { opacity: 1; color: var(--color-text); }
+            85%, 99% { opacity: 1; color: var(--color-red); }
+        }
+
+        .glitch-text.group-1 { animation: glitch-group-1 var(--glitch-frequency); }
+        .glitch-text.group-2 { animation: glitch-group-2 var(--glitch-frequency); }
+        .glitch-text.group-3 { animation: glitch-group-3 var(--glitch-frequency); }
+        .glitch-text.group-4 { animation: glitch-group-4 var(--glitch-frequency); }
+        .glitch-text.group-5 { animation: glitch-group-5 var(--glitch-frequency); }
+        .glitch-text.group-6 { animation: glitch-group-6 var(--glitch-frequency); }
+        .glitch-text.group-7 { animation: glitch-group-7 var(--glitch-frequency); }
+
+        /* Element glitch animations */
+        @keyframes glitch-elem-1 {
+            0%, 100% { opacity: 1; transform: translate(0, 0); }
+            1%, 99% { opacity: 0.8; transform: translate(-2px, 2px); }
+        }
+
+        @keyframes glitch-elem-2 {
+            0%, 14%, 100% { opacity: 1; transform: translate(0, 0); }
+            15%, 29% { opacity: 0.8; transform: translate(2px, -2px); }
+        }
+
+        @keyframes glitch-elem-3 {
+            0%, 28%, 100% { opacity: 1; transform: translate(0, 0); }
+            29%, 43% { opacity: 0.8; transform: translate(-2px, -2px); }
+        }
+
+        @keyframes glitch-elem-4 {
+            0%, 42%, 100% { opacity: 1; transform: translate(0, 0); }
+            43%, 57% { opacity: 0.8; transform: translate(2px, 2px); }
+        }
+
+        @keyframes glitch-elem-5 {
+            0%, 56%, 100% { opacity: 1; transform: translate(0, 0); }
+            57%, 71% { opacity: 0.8; transform: translate(-2px, 2px); }
+        }
+
+        @keyframes glitch-elem-6 {
+            0%, 70%, 100% { opacity: 1; transform: translate(0, 0); }
+            71%, 85% { opacity: 0.8; transform: translate(2px, -2px); }
+        }
+
+        @keyframes glitch-elem-7 {
+            0%, 84%, 100% { opacity: 1; transform: translate(0, 0); }
+            85%, 99% { opacity: 0.8; transform: translate(-2px, -2px); }
+        }
+
+        .glitch-elem.group-1 { animation: glitch-elem-1 var(--glitch-frequency); }
+        .glitch-elem.group-2 { animation: glitch-elem-2 var(--glitch-frequency); }
+        .glitch-elem.group-3 { animation: glitch-elem-3 var(--glitch-frequency); }
+        .glitch-elem.group-4 { animation: glitch-elem-4 var(--glitch-frequency); }
+        .glitch-elem.group-5 { animation: glitch-elem-5 var(--glitch-frequency); }
+        .glitch-elem.group-6 { animation: glitch-elem-6 var(--glitch-frequency); }
+        .glitch-elem.group-7 { animation: glitch-elem-7 var(--glitch-frequency); }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--color-darker) 0%, #1a2633 100%);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                repeating-linear-gradient(
+                    0deg,
+                    rgba(0, 217, 255, 0.03) 0px,
+                    rgba(0, 217, 255, 0.03) 2px,
+                    transparent 2px,
+                    transparent 4px
+                );
+            pointer-events: none;
+            animation: scanlines 0.15s linear infinite;
+        }
+
+        @keyframes scanlines {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(10px); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 2rem;
+            max-width: 900px;
+        }
+
+        .hero h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            font-weight: 900;
+            letter-spacing: 0.1em;
+            margin-bottom: 1rem;
+            color: var(--color-primary-cyan);
+            text-shadow: 0 0 30px rgba(0, 217, 255, 0.8), 0 0 60px rgba(0, 217, 255, 0.4);
+            animation: glitch 3s infinite;
+        }
+
+        @keyframes glitch {
+            0%, 100% { text-shadow: 0 0 30px rgba(0, 217, 255, 0.8); }
+            50% { text-shadow: 0 0 30px rgba(255, 0, 85, 0.6), 0 0 60px rgba(0, 217, 255, 0.4); }
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--color-text-secondary);
+            margin-bottom: 2rem;
+            letter-spacing: 0.05em;
+        }
+
+        .terminal-text {
+            font-family: var(--font-mono);
+            background: rgba(0, 20, 40, 0.9);
+            border: 2px solid var(--color-primary-cyan);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            text-align: left;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            box-shadow: 0 0 20px rgba(0, 217, 255, 0.3), inset 0 0 20px rgba(0, 217, 255, 0.1);
+        }
+
+        .terminal-text::before {
+            content: '> ';
+            color: var(--color-matrix-green);
+            font-weight: bold;
+        }
+
+        .crt-corner {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            border: 2px solid var(--color-primary-cyan);
+        }
+
+        .crt-corner.top-left {
+            top: -5px;
+            left: -5px;
+            border-right: none;
+            border-bottom: none;
+        }
+
+        .crt-corner.top-right {
+            top: -5px;
+            right: -5px;
+            border-left: none;
+            border-bottom: none;
+        }
+
+        .crt-corner.bottom-left {
+            bottom: -5px;
+            left: -5px;
+            border-right: none;
+            border-top: none;
+        }
+
+        .crt-corner.bottom-right {
+            bottom: -5px;
+            right: -5px;
+            border-left: none;
+            border-top: none;
+        }
+
+        /* ===== SECTION STYLES ===== */
+        section {
+            min-height: 100vh;
+            padding: 6rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section-content {
+            max-width: 1200px;
+            width: 100%;
+            position: relative;
+            z-index: 2;
+        }
+
+        .section-1 {
+            background: linear-gradient(135deg, #0a1428 0%, #1a2e3a 100%);
+        }
+
+        .section-1::before {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(0, 217, 255, 0.15) 0%, transparent 70%);
+            top: -100px;
+            right: 50px;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(30px); }
+        }
+
+        .section-1 h2 {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            color: var(--color-primary-cyan);
+            margin-bottom: 1.5rem;
+            text-shadow: 0 0 20px rgba(0, 217, 255, 0.6);
+        }
+
+        .section-2 {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d1b1b 100%);
+        }
+
+        .section-2 h2 {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            color: var(--color-accent-gold);
+            margin-bottom: 1.5rem;
+            text-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+            letter-spacing: 0.08em;
+        }
+
+        .section-3 {
+            background: linear-gradient(135deg, #0a1a0a 0%, #1a3a1a 100%);
+            position: relative;
+        }
+
+        .section-3 h2 {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            color: var(--color-matrix-green);
+            margin-bottom: 1.5rem;
+            text-shadow: 0 0 20px rgba(0, 255, 65, 0.8);
+            animation: matrix-pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes matrix-pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        .matrix-code {
+            font-family: var(--font-mono);
+            color: var(--color-matrix-green);
+            font-size: 0.9rem;
+            line-height: 2;
+            overflow: hidden;
+            max-height: 200px;
+        }
+
+        .matrix-code span {
+            display: inline-block;
+            animation: matrix-rain 3s linear infinite;
+        }
+
+        @keyframes matrix-rain {
+            0% { transform: translateY(-100%); opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(100%); opacity: 0; }
+        }
+
+        /* ===== TIMELINE STYLES ===== */
+        .timeline-container {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            gap: 2rem;
+            margin: 3rem 0;
+            position: relative;
+        }
+
+        .timeline-axis {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 65px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--color-accent-gold);
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+        }
+
+        .timeline-marker {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .timeline-marker:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-year {
+            font-family: var(--font-display);
+            color: var(--color-accent-gold);
+            font-size: 1.1rem;
+            font-weight: 700;
+            min-width: 50px;
+            text-align: right;
+            padding-top: 0.25rem;
+        }
+
+        .timeline-dot {
+            width: 16px;
+            height: 16px;
+            background: var(--color-accent-gold);
+            border-radius: 50%;
+            border: 3px solid var(--color-darker);
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.8);
+            position: relative;
+            z-index: 2;
+            animation: pulse-dot 2s ease-in-out infinite;
+            flex-shrink: 0;
+            margin-top: 0.25rem;
+        }
+
+        @keyframes pulse-dot {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .timeline-content {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
+
+        .timeline-box {
+            border: 2px solid var(--color-accent-gold);
+            padding: 1.5rem;
+            background: rgba(212, 175, 55, 0.05);
+            position: relative;
+        }
+
+        .timeline-box::before {
+            content: '';
+            position: absolute;
+            top: -8px;
+            left: -8px;
+            width: 16px;
+            height: 16px;
+            border: 2px solid var(--color-accent-gold);
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+        }
+
+        .timeline-box::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            right: -8px;
+            width: 16px;
+            height: 16px;
+            border: 2px solid var(--color-accent-gold);
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+        }
+
+        .timeline-box h3 {
+            color: var(--color-accent-gold);
+            margin-bottom: 0.5rem;
+            font-family: var(--font-display);
+        }
+
+        .timeline-box .company {
+            color: var(--color-accent-amber);
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-box p {
+            color: var(--color-text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* ===== CARD GRID ===== */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .card {
+            background: rgba(0, 217, 255, 0.05);
+            border: 1px solid var(--color-primary-cyan);
+            padding: 2rem;
+            position: relative;
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 217, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .section-1 .card::before {
+            background: linear-gradient(90deg, transparent, rgba(0, 217, 255, 0.2), transparent);
+        }
+
+        .section-2 .card::before {
+            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.2), transparent);
+        }
+
+        .section-3 .card::before {
+            background: linear-gradient(90deg, transparent, rgba(0, 255, 65, 0.2), transparent);
+        }
+
+        .card:hover::before {
+            left: 100%;
+        }
+
+        .card:hover {
+            box-shadow: 0 0 20px rgba(0, 217, 255, 0.3);
+            transform: translateY(-5px);
+        }
+
+        .section-2 .card:hover {
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+        }
+
+        .section-3 .card:hover {
+            box-shadow: 0 0 20px rgba(0, 255, 65, 0.3);
+        }
+
+        .card h3 {
+            color: var(--color-primary-cyan);
+            margin-bottom: 1rem;
+            font-family: var(--font-display);
+        }
+
+        .card p {
+            color: var(--color-text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* ===== BUTTONS ===== */
+        .btn {
+            font-family: var(--font-display);
+            padding: 0.8rem 2rem;
+            border: 2px solid var(--color-primary-cyan);
+            background: transparent;
+            color: var(--color-primary-cyan);
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--color-primary-cyan);
+            z-index: -1;
+            transition: left 0.3s ease;
+        }
+
+        .btn:hover {
+            color: var(--color-darker);
+            box-shadow: 0 0 20px rgba(0, 217, 255, 0.6);
+        }
+
+        .btn:hover::before {
+            left: 0;
+        }
+
+        .btn-gold {
+            border-color: var(--color-accent-gold);
+            color: var(--color-accent-gold);
+        }
+
+        .btn-gold::before {
+            background: var(--color-accent-gold);
+        }
+
+        .btn-gold:hover {
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.6);
+        }
+
+        .btn-matrix {
+            border-color: var(--color-matrix-green);
+            color: var(--color-matrix-green);
+        }
+
+        .btn-matrix::before {
+            background: var(--color-matrix-green);
+        }
+
+        .btn-matrix:hover {
+            box-shadow: 0 0 20px rgba(0, 255, 65, 0.6);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            section {
+                padding: 3rem 1rem;
+            }
+
+            .section-1 h2, .section-2 h2, .section-3 h2 {
+                font-size: 2rem;
+            }
+
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .terminal-text {
+                max-width: 100%;
+            }
+
+            .timeline-container {
+                grid-template-columns: 70px 1fr;
+                gap: 1rem;
+            }
+
+            .timeline-year {
+                font-size: 0.9rem;
+                min-width: 40px;
+            }
+
+            .timeline-line {
+                left: 45px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+        }
+
+        /* ===== TEXT STYLING ===== */
+        p {
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        em {
+            color: var(--color-primary-cyan);
+            font-style: italic;
+        }
+
+        strong {
+            color: var(--color-accent-gold);
+        }
+
+        /* ===== SCROLL PROGRESS ===== */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--color-primary-cyan), var(--color-matrix-green), var(--color-accent-gold));
+            width: 0%;
+            z-index: 9999;
+            transition: width 0.1s ease;
+        }
+
+        /* ===== NAVBAR ===== */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1.5rem 2rem;
+            background: rgba(10, 20, 40, 0.95);
+            border-bottom: 1px solid rgba(0, 217, 255, 0.2);
+            z-index: 500;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            backdrop-filter: blur(10px);
+            transition: border-color 0.5s ease;
+        }
+
+        nav.section-home {
+            border-bottom-color: rgba(0, 217, 255, 0.2);
+        }
+
+        nav.section-expertise {
+            border-bottom-color: rgba(0, 217, 255, 0.4);
+        }
+
+        nav.section-career {
+            border-bottom-color: rgba(212, 175, 55, 0.4);
+        }
+
+        nav.section-interests {
+            border-bottom-color: rgba(0, 255, 65, 0.4);
+        }
+
+        .logo {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            color: var(--color-primary-cyan);
+            text-shadow: 0 0 10px rgba(0, 217, 255, 0.5);
+            letter-spacing: 0.1em;
+            transition: color 0.5s ease, text-shadow 0.5s ease;
+        }
+
+        nav.section-home .logo {
+            color: var(--color-primary-cyan);
+            text-shadow: 0 0 10px rgba(0, 217, 255, 0.5);
+        }
+
+        nav.section-expertise .logo {
+            color: var(--color-primary-cyan);
+            text-shadow: 0 0 10px rgba(0, 217, 255, 0.5);
+        }
+
+        nav.section-career .logo {
+            color: var(--color-accent-gold);
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+        }
+
+        nav.section-interests .logo {
+            color: var(--color-matrix-green);
+            text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--color-text-secondary);
+            text-decoration: none;
+            font-family: var(--font-display);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--color-primary-cyan);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--color-primary-cyan);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a[href="#mr-robot"]:hover {
+            color: var(--color-primary-cyan);
+        }
+
+        .nav-links a[href="#mr-robot"]:hover::after {
+            background: var(--color-primary-cyan);
+        }
+
+        .nav-links a[href="#westworld"]:hover {
+            color: var(--color-accent-gold);
+        }
+
+        .nav-links a[href="#westworld"]:hover::after {
+            background: var(--color-accent-gold);
+        }
+
+        .nav-links a[href="#matrix"]:hover {
+            color: var(--color-matrix-green);
+        }
+
+        .nav-links a[href="#matrix"]:hover::after {
+            background: var(--color-matrix-green);
+        }
+    </style>
+</head>
+<body>
+    <div class="progress-bar"></div>
+
+    <nav id="main-nav" class="section-home">
+        <div class="logo">TOM MOLITOR</div>
+        <ul class="nav-links">
+            <li><a href="#intro">Home</a></li>
+            <li><a href="#mr-robot">Expertise</a></li>
+            <li><a href="#westworld">Career</a></li>
+            <li><a href="#matrix">Interests</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="intro">
+        <div class="hero-content">
+            <h1>TOM MOLITOR</h1>
+            <p><span class="glitch-text group-1" data-glitch="Data Architect">Senior Consultant</span> • <span class="glitch-text group-2" data-glitch="Analytics Expert">Data Visualization Specialist</span></p>
+            <div class="terminal-text">
+                <span class="glitch-text group-3" data-glitch="Insights Delivered">Data Driven Insights</span> | <span class="glitch-text group-4" data-glitch="PowerBI & Tableau">Tableau & Power BI</span> | <span class="glitch-text group-5" data-glitch="Database Expert">SQL Expert</span>
+            </div>
+            <div class="crt-corner top-left glitch-elem group-1"></div>
+            <div class="crt-corner top-right glitch-elem group-2"></div>
+            <div class="crt-corner bottom-left glitch-elem group-3"></div>
+            <div class="crt-corner bottom-right glitch-elem group-4"></div>
+        </div>
+    </section>
+
+    <!-- SECTION 1: EXPERTISE -->
+    <section class="section-1" id="mr-robot">
+        <div class="section-content">
+            <h2>EXPERTISE</h2>
+            <p>I specialize in <span class="glitch-text group-1" data-glitch="decoding">transforming</span> complex data into actionable insights through <em>powerful visualizations</em>. With deep experience in <strong>Tableau and Power BI</strong>, I've administered cloud environments and architected <span class="glitch-text group-2" data-glitch="enterprise-grade">end-to-end</span> analytics solutions for enterprise clients.</p>
+            
+            <div class="card-grid">
+                <div class="card">
+                    <h3>Data Visualization</h3>
+                    <p>Expert in <span class="glitch-text group-3" data-glitch="PowerBI">Tableau</span> and Power BI. I design intuitive dashboards that translate complex datasets into clear, compelling visual narratives for stakeholders.</p>
+                </div>
+                <div class="card">
+                    <h3>SQL & Data Engineering</h3>
+                    <p>Proficient in SQL for data querying and manipulation. Experienced with <span class="glitch-text group-4" data-glitch="ETL tools">dbt</span> for data transformations and Alteryx for advanced data workflows.</p>
+                </div>
+                <div class="card">
+                    <h3>Cloud Administration</h3>
+                    <p>Skilled in managing multiple <span class="glitch-text group-5" data-glitch="Cloud Platforms">Tableau Cloud</span> environments, ensuring optimal performance, security, and user adoption across organizations.</p>
+                </div>
+            </div>
+
+            <button class="btn">View Resume</button>
+        </div>
+    </section>
+
+    <!-- SECTION 2: CAREER -->
+    <section class="section-2" id="westworld">
+        <div class="section-content">
+            <h2>CAREER JOURNEY</h2>
+            <p>My career spans <span class="glitch-text group-6" data-glitch="unconventional">diverse</span> experiences, from military service to Fortune 500 consulting and boutique strategy firms. Each role has reinforced my ability to <em>deliver impact</em> through data-driven decision making and <span class="glitch-text group-7" data-glitch="innovation">technical excellence</span>.</p>
+            
+            <div class="timeline-container">
+                <div class="timeline-axis">
+                    <div class="timeline-line"></div>
+                    
+                    <div class="timeline-marker">
+                        <div class="timeline-year">2025</div>
+                        <div class="timeline-dot glitch-elem group-1"></div>
+                    </div>
+                    
+                    <div class="timeline-marker">
+                        <div class="timeline-year">2021</div>
+                        <div class="timeline-dot glitch-elem group-2"></div>
+                    </div>
+                    
+                    <div class="timeline-marker">
+                        <div class="timeline-year">2018</div>
+                        <div class="timeline-dot glitch-elem group-3"></div>
+                    </div>
+                    
+                    <div class="timeline-marker">
+                        <div class="timeline-year">2015</div>
+                        <div class="timeline-dot glitch-elem group-4"></div>
+                    </div>
+                    
+                    <div class="timeline-marker">
+                        <div class="timeline-year">2009</div>
+                        <div class="timeline-dot glitch-elem group-5"></div>
+                    </div>
+                </div>
+
+                <div class="timeline-content">
+                    <div class="timeline-box">
+                        <h3>Senior Consultant</h3>
+                        <div class="company">West Monroe</div>
+                        <p>Leading data visualization and analytics initiatives for enterprise clients, architecting scalable BI solutions and mentoring consulting teams.</p>
+                    </div>
+
+                    <div class="timeline-box">
+                        <h3>Consultant</h3>
+                        <div class="company">Slalom</div>
+                        <p>Delivered analytics, Tableau Cloud administration, and data strategy engagements for leading brands across multiple industries.</p>
+                    </div>
+
+                    <div class="timeline-box">
+                        <h3>Digital Accelerator</h3>
+                        <div class="company">PwC</div>
+                        <p>Drove technology transformation across Fortune 500 clients, blending business acumen with technical depth in data analytics.</p>
+                    </div>
+
+                    <div class="timeline-box">
+                        <h3>Bachelor of Accounting</h3>
+                        <div class="company">DePaul University</div>
+                        <p>Built foundational knowledge in business operations, financial systems, and analytical thinking in Chicago.</p>
+                    </div>
+
+                    <div class="timeline-box">
+                        <h3>Communications Technician Mate (CTM)</h3>
+                        <div class="company">USS Bainbridge (DDG 96)</div>
+                        <p>Developed discipline, leadership, and precision under high-pressure operational environments in the United States Navy.</p>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn btn-gold">LinkedIn Profile</button>
+        </div>
+    </section>
+
+    <!-- SECTION 3: INTERESTS -->
+    <section class="section-3" id="matrix">
+        <div class="section-content">
+            <h2>BEYOND WORK</h2>
+            <p>When I'm not architecting data solutions, I'm <span class="glitch-text group-1" data-glitch="hacking">exploring</span> new technologies and hobbies. Whether it's working with my loyal companion Jack or crafting in the woodshop, I believe in <em>continuous learning</em> and applying <span class="glitch-text group-2" data-glitch="curiosity">passion</span> to all aspects of life.</p>
+            
+            <div class="matrix-code">
+                <div><span style="animation-delay: 0s;">// Homelab experiments with containerization</span></div>
+                <div><span style="animation-delay: 0.3s;">// Woodworking projects and furniture design</span></div>
+                <div><span style="animation-delay: 0.6s;">// Emerging tech exploration and automation</span></div>
+                <div><span style="animation-delay: 0.9s;">// Quality time with Jack the dog</span></div>
+            </div>
+
+            <div class="card-grid">
+                <div class="card" style="border-color: var(--color-matrix-green); background: rgba(0, 255, 65, 0.08);">
+                    <h3 style="color: var(--color-matrix-green);">Homelab</h3>
+                    <p>Constantly experimenting with new <span class="glitch-text group-3" data-glitch="systems">technologies</span>, containerization, and infrastructure automation. Always learning, always building.</p>
+                </div>
+                <div class="card" style="border-color: var(--color-matrix-green); background: rgba(0, 255, 65, 0.08);">
+                    <h3 style="color: var(--color-matrix-green);">Woodworking</h3>
+                    <p>Hands-on creativity with precision and design. Building <span class="glitch-text group-4" data-glitch="crafted pieces">functional art</span> and learning traditional craft techniques.</p>
+                </div>
+                <div class="card" style="border-color: var(--color-matrix-green); background: rgba(0, 255, 65, 0.08);">
+                    <h3 style="color: var(--color-matrix-green);">Jack (Named After Jack Bauer)</h3>
+                    <p>My adventurous companion who reminds me that life's best moments happen when you <span class="glitch-text group-5" data-glitch="disconnect">step away</span> from the screen.</p>
+                </div>
+            </div>
+
+            <button class="btn btn-matrix">Get in Touch</button>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer style="text-align: center; padding: 3rem 2rem; border-top: 1px solid rgba(0, 217, 255, 0.2); background: rgba(10, 20, 40, 0.8); color: var(--color-text-secondary);">
+        <p style="margin-bottom: 0.5rem;">Tom Molitor | Senior Consultant | Data Visualization Expert</p>
+        <p style="font-size: 0.8rem; margin-bottom: 0;">Champaign, IL | <a href="mailto:tom@example.com" style="color: var(--color-primary-cyan); text-decoration: none;">Contact</a> | <a href="https://linkedin.com" style="color: var(--color-primary-cyan); text-decoration: none;">LinkedIn</a></p>
+    </footer>
+
+    <script>
+        // Progress bar and section tracking
+        document.addEventListener('scroll', function() {
+            const scrolled = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollProgress = (scrolled / docHeight) * 100;
+            document.querySelector('.progress-bar').style.width = scrollProgress + '%';
+
+            // Determine current section and update nav
+            const sections = ['intro', 'mr-robot', 'westworld', 'matrix'];
+            const nav = document.getElementById('main-nav');
+            
+            let currentSection = 'home';
+            
+            sections.forEach(sectionId => {
+                const section = document.getElementById(sectionId);
+                if (section) {
+                    const rect = section.getBoundingClientRect();
+                    if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+                        if (sectionId === 'intro') currentSection = 'home';
+                        else if (sectionId === 'mr-robot') currentSection = 'expertise';
+                        else if (sectionId === 'westworld') currentSection = 'career';
+                        else if (sectionId === 'matrix') currentSection = 'interests';
+                    }
+                }
+            });
+            
+            nav.className = 'section-' + currentSection;
+        });
+
+        // Smooth scroll for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Assign random glitch groups to elements
+        function assignRandomGroups() {
+            const glitchElements = document.querySelectorAll('[class*="group-"]');
+            glitchElements.forEach(el => {
+                // Remove existing group classes
+                el.classList.remove('group-1', 'group-2', 'group-3', 'group-4', 'group-5', 'group-6', 'group-7');
+                // Assign random group
+                const randomGroup = Math.floor(Math.random() * 7) + 1;
+                el.classList.add(`group-${randomGroup}`);
+            });
+        }
+
+        // Assign groups on page load and periodically
+        assignRandomGroups();
+    </script>
+</body>
+</html>
